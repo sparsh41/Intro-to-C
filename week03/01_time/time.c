@@ -14,13 +14,15 @@ int main(){
     scanf("%d", &seconds);
     printf("%d seconds is ", seconds);
 
-    int minutes = seconds/60;
-    int hours = minutes/60;
+    int minutes = seconds / 60;
+    int hours = minutes / 60;
+    int days = hours / 24;
 
-    minutes = minutes%60;
-    seconds = seconds%60;
+    hours = hours % 24;
+    minutes = minutes % 60;
+    seconds = seconds % 60;
 
     // Print the result
-    printf("%d hours, %d minutes, and %d seconds.\n", hours, minutes, seconds);
+    printf("%d days, %d hours, %d minutes, and %d seconds.\n", days, hours, minutes, seconds);
     return 0;
 }
